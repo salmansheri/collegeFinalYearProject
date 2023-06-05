@@ -7,18 +7,20 @@ const Navigation = ({ account, setAccount }) => {
         setAccount(accounts[0]); 
     }
     return (
-        <nav>
+        <nav style={{
+            display: "flex", 
+            justifyContent: "space-between",
+            height: "80px",
+            alignItems: "center",
+            width: "100%",
+        }}>
             <ul className="nav__links">
                 <li><a href="#">Buy</a></li>
                 <li><a href="#">Rent</a></li>
                 <li><a href="#">Sell</a></li>
             </ul>
 
-            <div className="nav__brand">
-                <img src={logo} alt="Logo" />
-                <h1>Millow</h1>
-
-            </div>
+           
 
             {account ? (
                 <button type="button" className="nav__connect">
